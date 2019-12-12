@@ -6,15 +6,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FinalTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="y1b-qH-acQ"/>
+                    <navigationItem key="navigationItem" id="gJ0-Ff-fma"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="91.741071428571431"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="KFg-RV-GOR">
@@ -32,17 +32,37 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tdY-Gc-5lo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gLO-Ti-2Cc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="yS1-bN-Ob2"/>
+                        <segue destination="hdt-DF-yhH" kind="relationship" relationship="viewControllers" id="yS1-bN-Ob2"/>
                         <segue destination="Cja-sW-Mes" kind="relationship" relationship="viewControllers" id="c00-YH-KRP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-rD-OV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="RGg-Rp-7jC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hdt-DF-yhH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="y1b-qH-acQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQC-P1-vM9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2r0-JY-2Ze"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9E-8G-HcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="91.741071428571431"/>
         </scene>
     </scenes>
 </document>
