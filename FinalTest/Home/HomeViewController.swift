@@ -15,6 +15,9 @@ import PGFramework
 class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBAction func postButton(_ sender: UIButton) {
+        let vc = PostViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        animatorManager.navigationType = .slide_push
     }
     
 }
