@@ -37,22 +37,22 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9A-up-bYx">
-                        <rect key="frame" x="36" y="364" width="342" height="66"/>
+                        <rect key="frame" x="16" y="364" width="382" height="77"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="Z9A-up-bYx" secondAttribute="bottom" constant="8" id="0x3-z2-vSf"/>
+                    <constraint firstItem="Z9A-up-bYx" firstAttribute="leading" secondItem="hhB-It-maQ" secondAttribute="leading" constant="16" id="4a8-F2-2zj"/>
+                    <constraint firstAttribute="bottom" secondItem="Z9A-up-bYx" secondAttribute="bottom" constant="8" id="Diw-fe-DkD"/>
                     <constraint firstItem="cij-QF-L3O" firstAttribute="top" secondItem="Uln-ja-udV" secondAttribute="bottom" constant="8" id="GON-7g-Rs3"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Z9A-up-bYx" secondAttribute="trailing" constant="16" id="Km4-cA-G6m"/>
                     <constraint firstItem="Uln-ja-udV" firstAttribute="leading" secondItem="hhB-It-maQ" secondAttribute="leading" constant="16" id="Q5F-Lr-8Cw"/>
-                    <constraint firstItem="Z9A-up-bYx" firstAttribute="leading" secondItem="hhB-It-maQ" secondAttribute="leadingMargin" constant="16" id="Tlz-Dh-VLU"/>
                     <constraint firstItem="cij-QF-L3O" firstAttribute="leading" secondItem="hhB-It-maQ" secondAttribute="leading" id="YPX-m1-Gq7"/>
                     <constraint firstItem="cGw-1c-zrs" firstAttribute="leading" secondItem="Uln-ja-udV" secondAttribute="trailing" constant="8" id="Ydb-Bw-5DX"/>
                     <constraint firstAttribute="trailing" secondItem="cij-QF-L3O" secondAttribute="trailing" id="cVf-hM-ZuV"/>
                     <constraint firstAttribute="trailing" secondItem="cGw-1c-zrs" secondAttribute="trailing" constant="16" id="e8F-l0-bG0"/>
+                    <constraint firstAttribute="trailing" secondItem="Z9A-up-bYx" secondAttribute="trailing" constant="16" id="lwf-zz-QeQ"/>
                     <constraint firstItem="Uln-ja-udV" firstAttribute="top" secondItem="hhB-It-maQ" secondAttribute="top" constant="8" id="o5k-i8-x1A"/>
                     <constraint firstItem="Z9A-up-bYx" firstAttribute="top" secondItem="cij-QF-L3O" secondAttribute="bottom" constant="8" id="sGx-oP-v7F"/>
                     <constraint firstItem="cGw-1c-zrs" firstAttribute="centerY" secondItem="Uln-ja-udV" secondAttribute="centerY" id="wuf-tm-Ud4"/>

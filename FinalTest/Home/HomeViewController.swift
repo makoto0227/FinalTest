@@ -24,6 +24,7 @@ extension HomeViewController {
     override func loadView() {
         super.loadView()
         tableView.dataSource = self
+        tableView.delegate = self
         loadTableViewCellFromXib(tableView: tableView, cellName: "HomeTableViewCell")
     }
     
@@ -37,7 +38,7 @@ extension HomeViewController {
 }
 
 // MARK: - Protocol
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -46,7 +47,11 @@ extension HomeViewController: UITableViewDataSource {
         guard let cell: HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else{return UITableViewCell()}
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = PostDetailsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
     
 }
 
