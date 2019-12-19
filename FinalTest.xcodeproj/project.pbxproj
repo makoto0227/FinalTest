@@ -27,6 +27,10 @@
 		30EEA3C223A226AD00981692 /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30EEA3C023A226AD00981692 /* PostDetailsViewController.xib */; };
 		30EEA3C623A234FC00981692 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEA3C423A234FC00981692 /* PostViewController.swift */; };
 		30EEA3C723A234FC00981692 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30EEA3C523A234FC00981692 /* PostViewController.xib */; };
+		30F3E83923AB159200D9E572 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30F3E83823AB159200D9E572 /* GoogleService-Info.plist */; };
+		30F3E83D23AB1AFE00D9E572 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3E83B23AB1AFE00D9E572 /* SignUpViewController.swift */; };
+		30F3E83E23AB1AFE00D9E572 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F3E83C23AB1AFE00D9E572 /* SignUpViewController.xib */; };
+		30F3E84123AB219100D9E572 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3E84023AB219100D9E572 /* UserModel.swift */; };
 		648012121CD364A185ECA46F /* Pods_FinalTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD992FE1839F10331A9CF3D3 /* Pods_FinalTestTests.framework */; };
 		7116A99CA6B430C24F4C3E87 /* Pods_FinalTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8B1AB806540863005623A4 /* Pods_FinalTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +78,10 @@
 		30EEA3C023A226AD00981692 /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		30EEA3C423A234FC00981692 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		30EEA3C523A234FC00981692 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		30F3E83823AB159200D9E572 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30F3E83B23AB1AFE00D9E572 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		30F3E83C23AB1AFE00D9E572 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		30F3E84023AB219100D9E572 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3DB85C8418E4FBA36E669FE6 /* Pods-FinalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalTest.debug.xcconfig"; path = "Target Support Files/Pods-FinalTest/Pods-FinalTest.debug.xcconfig"; sourceTree = "<group>"; };
 		4740153002F430107D1448C8 /* Pods-FinalTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalTestTests.release.xcconfig"; path = "Target Support Files/Pods-FinalTestTests/Pods-FinalTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A2378AF953E22CAA17BC526 /* Pods-FinalTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-FinalTestUITests/Pods-FinalTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +159,8 @@
 		30ECBA832398F7760009E8EF /* FinalTest */ = {
 			isa = PBXGroup;
 			children = (
+				30F3E83F23AB215F00D9E572 /* Model */,
+				30F3E83A23AB1ACE00D9E572 /* Auth */,
 				30EEA3B423A160F100981692 /* MyPage */,
 				30ECBAB82398FF130009E8EF /* Home */,
 				30ECBA842398F7760009E8EF /* AppDelegate.swift */,
@@ -159,6 +169,7 @@
 				30ECBA8D2398F77A0009E8EF /* Assets.xcassets */,
 				30ECBA8F2398F77A0009E8EF /* LaunchScreen.storyboard */,
 				30ECBA922398F77A0009E8EF /* Info.plist */,
+				30F3E83823AB159200D9E572 /* GoogleService-Info.plist */,
 			);
 			path = FinalTest;
 			sourceTree = "<group>";
@@ -229,6 +240,23 @@
 				30EEA3C523A234FC00981692 /* PostViewController.xib */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		30F3E83A23AB1ACE00D9E572 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				30F3E83B23AB1AFE00D9E572 /* SignUpViewController.swift */,
+				30F3E83C23AB1AFE00D9E572 /* SignUpViewController.xib */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		30F3E83F23AB215F00D9E572 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30F3E84023AB219100D9E572 /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C13228FBEA3F5ED729D3C864 /* Frameworks */ = {
@@ -354,10 +382,12 @@
 				30EEA3C723A234FC00981692 /* PostViewController.xib in Resources */,
 				30ECBA912398F77A0009E8EF /* LaunchScreen.storyboard in Resources */,
 				30ECBA8E2398F77A0009E8EF /* Assets.xcassets in Resources */,
+				30F3E83E23AB1AFE00D9E572 /* SignUpViewController.xib in Resources */,
 				30ECBA8C2398F7760009E8EF /* Main.storyboard in Resources */,
 				30ECBABC2398FF640009E8EF /* HomeTableViewCell.xib in Resources */,
 				30ECBAB72398FDB80009E8EF /* HomeViewController.xib in Resources */,
 				30EEA3B823A1612E00981692 /* MyPageViewController.xib in Resources */,
+				30F3E83923AB159200D9E572 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +504,9 @@
 				30EEA3C123A226AD00981692 /* PostDetailsViewController.swift in Sources */,
 				30ECBA872398F7760009E8EF /* SceneDelegate.swift in Sources */,
 				30ECBABB2398FF640009E8EF /* HomeTableViewCell.swift in Sources */,
+				30F3E83D23AB1AFE00D9E572 /* SignUpViewController.swift in Sources */,
 				30ECBAB62398FDB80009E8EF /* HomeViewController.swift in Sources */,
+				30F3E84123AB219100D9E572 /* UserModel.swift in Sources */,
 				30EEA3BC23A16C7800981692 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

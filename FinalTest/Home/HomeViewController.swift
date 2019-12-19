@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
 import PGFramework
+import FirebaseAuth
 
 
 // MARK: - Property
@@ -26,6 +26,10 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     override func loadView() {
         super.loadView()
+        if Auth.auth().currentUser?.email == nil {
+            let vc = SignUpViewController()
+            navigationController?.pushViewController(vc, animated: false)
+        }
         tableView.dataSource = self
         tableView.delegate = self
         loadTableViewCellFromXib(tableView: tableView, cellName: "HomeTableViewCell")
