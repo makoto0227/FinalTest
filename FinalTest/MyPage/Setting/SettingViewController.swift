@@ -17,7 +17,9 @@ class SettingViewController: BaseViewController {
         dismiss(animated: true) {}
     }
     @IBAction func touchedDoneButton(_ sender: UIButton) {
-        dismiss(animated: true) {}
+        UserModel.update(request: myself, image: nil) {
+            self.dismiss(animated: true) {}
+        }
     }
     @IBOutlet weak var userIcon: UIImageView!
     @IBAction func touchedEditImageButton(_ sender: UIButton) {
