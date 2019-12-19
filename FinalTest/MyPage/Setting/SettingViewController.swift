@@ -33,13 +33,15 @@ class SettingViewController: BaseViewController {
     }
     @IBAction func touchedDeleteButton(_ sender: UIButton) {
     }
-    
+    var myself: UserModel = UserModel()
 }
 
 // MARK: - Life cycle
 extension SettingViewController {
     override func loadView() {
         super.loadView()
+        setIcon()
+        setTextField()
     }
     
     override func viewDidLoad() {
@@ -52,11 +54,38 @@ extension SettingViewController {
 }
 
 // MARK: - Protocol
-extension SettingViewController {
-    
+extension SettingViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField.tag {
+        case 0:
+            myself.nickname = textField.text
+        case 1:
+            myself.description = textField.text
+        case 2:
+            myself.mail = textField.text
+        case 3:
+            myself.password = textField.text
+        default:
+            break
+        }
+        return true
+    }
 }
 
 // MARK: - method
 extension SettingViewController {
-    
+    func setIcon(){
+        userIcon.layer.cornerRadius = 50
+        userIcon.layer.masksToBounds = true
+    }
+    func setTextField(){
+        nameTextField.delegate = self
+        descriptionTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        nameTextField.text = myself.nickname
+        descriptionTextField.text = myself.description
+        emailTextField.text = myself.mail
+        passwordTextField.text = myself.password
+    }
 }
