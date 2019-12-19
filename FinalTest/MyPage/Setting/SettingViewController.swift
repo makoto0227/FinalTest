@@ -27,6 +27,9 @@ class SettingViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func touchedLogoutButton(_ sender: UIButton) {
+        UserModel.logOut {
+            transitionStoryboard(name: "Main")
+        }
     }
     @IBAction func touchedDeleteButton(_ sender: UIButton) {
     }
