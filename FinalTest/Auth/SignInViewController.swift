@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  SignInViewController.swift
 //  FinalTest
 //
 //  Created by 宮崎真 on 2019/12/19.
@@ -11,32 +11,28 @@ import PGFramework
 
 
 // MARK: - Property
-class SignUpViewController: BaseViewController {
-    @IBOutlet weak var userNameTextField: UITextField!
+class SignInViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBAction func touchedSignUpButton(_ sender: UIButton) {
-        userModel.nickname = userNameTextField.text
-        userModel.mail = emailTextField.text
-        userModel.password = passwordTextField.text
-        UserModel.create(request: userModel, success: {
+    @IBAction func touchedSignInButton(_ sender: UIButton) {
+        UserModel.signIn(email: emailTextField.text ?? "", pass: passwordTextField.text ?? "", failure: { (error) in
+            
+        }) {
             let vc = HomeViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             self.animatorManager.navigationType = .push
-        }) { (error) in
-            print(error)
         }
     }
-    @IBAction func touchedSignInButton(_ sender: UIButton) {
-        let vc = SignInViewController()
+    @IBAction func touchedSignUpButton(_ sender: UIButton) {
+        let vc = SignUpViewController()
         navigationController?.pushViewController(vc, animated: true)
-        animatorManager.navigationType = .slide_push
+        animatorManager.navigationType = .slide_pop
     }
-    var userModel: UserModel = UserModel()
+    
 }
 
 // MARK: - Life cycle
-extension SignUpViewController {
+extension SignInViewController {
     override func loadView() {
         super.loadView()
     }
@@ -51,11 +47,11 @@ extension SignUpViewController {
 }
 
 // MARK: - Protocol
-extension SignUpViewController {
+extension SignInViewController {
     
 }
 
 // MARK: - method
-extension SignUpViewController {
+extension SignInViewController {
     
 }
