@@ -17,9 +17,10 @@ class MyPageViewController: BaseViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBAction func touchedSettingButton(_ sender: UIButton) {
         let vc = SettingViewController()
+        vc.myself = self.myself
         present(vc, animated: true) {}
     }
-    
+    var myself: UserModel = UserModel()
     
 }
 
@@ -27,6 +28,12 @@ class MyPageViewController: BaseViewController {
 extension MyPageViewController {
     override func loadView() {
         super.loadView()
+        setIcon()
+        UserModel.readMe { (me) in
+            self.myself = me
+            self.userName.text = me.nickname
+            self.descriptionLabel.text = me.description
+        }
     }
     
     override func viewDidLoad() {
@@ -45,5 +52,8 @@ extension MyPageViewController {
 
 // MARK: - method
 extension MyPageViewController {
-    
+    func setIcon(){
+        userIcon.layer.cornerRadius = 50
+        userIcon.layer.masksToBounds = true
+    }
 }
